@@ -1,23 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+// import "./App.css"; // 1.
+// import styles from "./App.module.css"; // 2.
+// import "./App.scss"; // 3.
+import styles from "./App.module.scss"; // 4.
+
+import Button from "./components/Button";
+
+console.log(styles);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.App}>
+      <header className={styles["App-header"]}>
+        <img src={logo} className={styles["App-logo"]} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Button />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
